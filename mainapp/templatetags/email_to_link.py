@@ -7,3 +7,7 @@ register = template.Library()
 @register.filter
 def email_to_link(value):
     return mark_safe(f"<a href='mailto:{value}'>{value}</a>")
+
+@register.filter
+def email_to_link(value):
+    return mark_safe(f"<a href='mailto:{value}'>{value}</a>")
