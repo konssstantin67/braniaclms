@@ -28,6 +28,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+<<<<<<< HEAD
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -38,6 +39,16 @@ INSTALLED_APPS = [
     "social_django",
     "mainapp",
     "authapp",
+=======
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'markdownify.apps.MarkdownifyConfig',
+    'mainapp',
+>>>>>>> aafd0af (Lesson_4)
 ]
 
 AUTH_USER_MODEL = "authapp.CustomUser"
@@ -131,6 +142,7 @@ STATIC_URL = "/static/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
+<<<<<<< HEAD
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 STATICFILES_DIRS = [
@@ -161,3 +173,6 @@ SOCIAL_AUTH_VK_OAUTH2_SECRET = "heAcAO9kLZNVfHMuGk5a"
 SOCIAL_AUTH_VK_OAUTH2_SCOPE = [
     "email",
 ]
+=======
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+>>>>>>> aafd0af (Lesson_4)

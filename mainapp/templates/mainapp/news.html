@@ -26,13 +26,22 @@
               {{ item.created|date:"Y-m-d h-i-s" }}
             </h6>
             <p class="card-text">{{ item.preambule }}</p>
+<<<<<<< HEAD
             <a href="{% url 'mainapp:news_detail' pk=item.pk %}" class="card-link">Подробнее</a>
+=======
+            <a href="{% url 'mainapp:news_detail' pk=item.pk %}"
+              class="card-link">Подробнее</a>
+>>>>>>> aafd0af (Lesson_4)
           </div>
         </div>
       {% endfor %}
 
     </div>
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> aafd0af (Lesson_4)
     <div class="col-lg-4">
       <div class="card my-2 sticky-top">
         <div class="card-header">
@@ -52,8 +61,15 @@
               </div>
               <input type="date" class="form-control" name="dateTo">
             </div>
+<<<<<<< HEAD
 
             <button type="submit" class="btn btn-primary btn-block">Фильтровать</button>
+=======
+            
+
+            <button type="submit"
+              class="btn btn-primary btn-block">Фильтровать</button>
+>>>>>>> aafd0af (Lesson_4)
           </form>
         </div>
       </div>
