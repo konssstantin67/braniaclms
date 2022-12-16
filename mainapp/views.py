@@ -8,10 +8,9 @@ class MainPageView(TemplateView):
     template_name = "mainapp/index.html"
 
 
-
 class NewsPageView(TemplateView):
     template_name = "mainapp/news.html"
-    
+
     def get_context_data(self, **kwargs):
         # Get all previous data
         context = super().get_context_data(**kwargs)
@@ -20,10 +19,9 @@ class NewsPageView(TemplateView):
         return context
 
 
-
 class NewsPageDetailView(TemplateView):
     template_name = "mainapp/news_detail.html"
-    
+
     def get_context_data(self, pk=None, **kwargs):
         context = super().get_context_data(pk=pk, **kwargs)
         context["news_object"] = get_object_or_404(mainapp_models.News, pk=pk)
@@ -32,7 +30,7 @@ class NewsPageDetailView(TemplateView):
 
 class CoursesListView(TemplateView):
     template_name = "mainapp/courses_list.html"
-    
+
     def get_context_data(self, **kwargs):
         context = super(CoursesListView, self).get_context_data(**kwargs)
         context["objects"] = mainapp_models.Courses.objects.all()[:7]
@@ -41,7 +39,7 @@ class CoursesListView(TemplateView):
 
 class CoursesDetailView(TemplateView):
     template_name = "mainapp/courses_detail.html"
-    
+
     def get_context_data(self, pk=None, **kwargs):
         context = super(CoursesDetailView, self).get_context_data(**kwargs)
         context["course_object"] = get_object_or_404(mainapp_models.Courses, pk=pk)
@@ -56,7 +54,3 @@ class ContactsPageView(TemplateView):
 
 class DocSitePageView(TemplateView):
     template_name = "mainapp/doc_site.html"
-
-
-class LoginPageView(TemplateView):
-    template_name = "mainapp/login.html"
