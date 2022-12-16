@@ -7,6 +7,7 @@ app_name = MainappConfig.name
 
 urlpatterns = [
     path("", views.MainPageView.as_view(), name="main_page"),
+<<<<<<< HEAD
     path("news/", views.NewsListView.as_view(), name="news"),
     path("news/create/", views.NewsCreateView.as_view(), name="news_create"),
     path(
@@ -24,17 +25,24 @@ urlpatterns = [
         views.NewsDeleteView.as_view(),
         name="news_delete",
     ),
+=======
+    path("news/", views.NewsPageView.as_view(), name="news"),
+    path("news/<int:pk>/", views.NewsPageDetailView.as_view(), name="news_detail"),
+>>>>>>> 2fba85d (lesson_5)
     path("courses/", views.CoursesListView.as_view(), name="courses"),
     path(
         "courses/<int:pk>/",
         views.CoursesDetailView.as_view(),
         name="courses_detail",
     ),
+<<<<<<< HEAD
     path(
         "course_feedback/",
         views.CourseFeedbackFormProcessView.as_view(),
         name="course_feedback",
     ),
+=======
+>>>>>>> 2fba85d (lesson_5)
     path("contacts/", views.ContactsPageView.as_view(), name="contacts"),
     path("doc_site/", views.DocSitePageView.as_view(), name="doc_site"),
 ]

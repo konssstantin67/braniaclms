@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 
@@ -37,3 +38,6 @@ class CourseTeachersAdmin(admin.ModelAdmin):
         return ", ".join((i.name for i in obj.course.all()))
 
     get_courses.short_description = _("Courses")
+=======
+# Register your models here.
+>>>>>>> 2fba85d (lesson_5)
