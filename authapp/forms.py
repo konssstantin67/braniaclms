@@ -33,7 +33,6 @@ class CustomUserCreationForm(UserCreationForm):
 
 
 class CustomUserChangeForm(forms.ModelForm):
-
     class Meta:
         model = get_user_model()
         fields = (
@@ -53,8 +52,9 @@ class CustomUserChangeForm(forms.ModelForm):
                 os.remove(self.instance.avatar.path)
         return self.cleaned_data.get(arg_as_str)
 
-        def clean_age(self):
-            data = self.cleaned_data.get("age")
+    def clean_age(self):
+        data = self.cleaned_data.get("age")
+        if data:
             if data < 10 or data > 100:
                 raise ValidationError(_("Please, enter a valid age!"))
         return data
